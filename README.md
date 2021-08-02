@@ -1,8 +1,8 @@
 # Curriculum Vitae
 
-[Download here.](https://github.com/lorossi/curriculum-vitae/raw/main/cv_4.pdf)
+[Download here.](https://github.com/lorossi/curriculum-vitae/raw/main/curriculum-vitae.pdf)
 
-[Web viewer here.](https://github.com/lorossi/curriculum-vitae/blob/main/cv_4.pdf)
+[Web viewer here.](https://github.com/lorossi/curriculum-vitae/blob/main/curriculum-vitae.pdf)
 
 ## Credits
 
