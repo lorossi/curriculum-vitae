@@ -6,4 +6,4 @@
 
 ## Credits
 
-Template by [LaTeX Templates](https://www.latextemplates.com/template/medium-length-professional-cv)
+Template by [Shubham Mazumder](https://it.overleaf.com/latex/templates/plushcv/jybpnsftmdkf), slightly edited to fit my needs.

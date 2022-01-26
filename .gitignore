@@ -1,4 +1,6 @@
-*
-!curriculum-vitae.pdf
-!curriculum-vitae.tex
-!resume.cls
+*.aux
+*.log
+*.f*
+*.out
+*.gz
+*temp*
