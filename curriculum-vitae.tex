@@ -5,29 +5,16 @@
 %
 % Author:
 % Shubham Mazumder (http://mazumder.me)
+% Edited to suit my needs by Lorenzo Rossi
 %
 % Hacked together from:
 % https://github.com/deedydas/Deedy-Resume
 %
 % IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
-%
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% TODO:
-% 1. Figure out a smoother way for the document to flow onto the next page.
-% 3. Add more icon options
-% 4. Fix hacky left alignment on contact line
-% 5. Remove Hacky fix for awkward extra vertical space
-%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % CHANGELOG:
 %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% Known Issues:
-% 1. Overflows onto second page if any column's contents are more than the vertical limit.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%Icons:
 %%Main: https://icons8.com/icons/carbon-copy
@@ -54,8 +41,6 @@
   {\href{https://www.linkedin.com/in/lorenzo-rossi-897628212/}{Lorenzo Rossi}}
 }
 
-% \namesection{Firstname}{Lastname}{Full Stack Software Engineer}{\contactline{\href{https://www.mazumder.me}{mazumder.me}}{\href{https://www.github.com/sansquoi}{sansquoi}}{\href{https://www.linkedin.com/mazumders}{mazumders}}{\href{mailto:shubham.mazumder@gmail.com}{first.last@email.com}}{\href{tel:+1999999999}{9999999999}}}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %     COLUMN ONE
@@ -76,25 +61,11 @@
   \vspace{\topsep} % Hacky fix for awkward extra vertical space
   \begin{tightemize}
     \sectionsep
-    \item Engaged and completed multiple projects involving both embedded (mostly using ESP32 and Arduino)
-    and desktop (on both Linux and Windows) systems
-    \item Gained important soft-skills like dealing with a vast amount of work and collaborating with people all
-    over the world
-    \item Got the chance to interface myself with the real world outside my university and interact with real life
-    projects
+    \item Engaged and completed multiple projects involving both embedded \textit{(using ESP32, Arduino and RaspberryPi)} and desktop \textit{(on both Linux and Windows)} systems
+    \item Gained important soft skills like dealing with a vast amount of work and collaborating with people all over the world
+    \item Got the chance to interface with the real world outside my university and interact with real life projects
   \end{tightemize}
   \sectionsep
-
-  % \runsubsection{Freelancing}
-  % \descript{|Software developer}
-  % \location{October 2020 – Current | Tokyo, Japan}
-  % \vspace{\topsep} % Hacky fix for awkward extra vertical space
-  % \begin{tightemize}
-  % \sectionsep
-  % \item Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper venenatis nisi at suscipit. Vestibulum vel odio in diam ultrices posuere. Cras suscipit faucibus ullamcorper.
-  % \item Ut consectetur tempus tincidunt. Curabitur in felis et leo elementum facilisis at non metus. Vestibulum et ullamcorper augue, nec accumsan tellus. \item Cras posuere in nunc vel sagittis. Aliquam aliquet non orci id pellentesque. Nulla gravida lectus quis tellus rhoncus rhoncus.
-  % \end{tightemize}
-  % \sectionsep
 
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   %     Projects
@@ -105,24 +76,25 @@
   \runsubsection{Embedded developer}
   \descript{Arduino | ESP32/ESP8266 | PIC}
   \begin{tightemize}
-    \item Experience in developing embedded system using microcontrollers
+    \item Experience in developing embedded systems using microcontrollers
     \item Development of IoT system for real word data measurements
-    \item Creation of MQTT based systems to interface users with data
+    \item Creation of MQTT-based systems to interface users with data
   \end{tightemize}
   \sectionsep
 
   \runsubsection{Front End developer}
   \descript{JavaScript | HTML5 | CSS}
+
   \begin{tightemize}
     \item Development of websites and interactive web programs
-    \item Foundations of web design and creation of user friendly interfaces
+    \item Foundations of web design and creation of user-friendly interfaces
   \end{tightemize}
   \sectionsep
 
   \runsubsection{Full Stack developer}
   \descript{JavaScript | Python}
   \begin{tightemize}
-    \item Development of websites from back to front end, including data analysis and visualizations
+    \item Development of websites from back to front-end, including data analysis and visualizations
     \item Integration of web services with serverless platforms like AWS Lambda
   \end{tightemize}
   \sectionsep
@@ -144,18 +116,6 @@
   \end{tightemize}
   \sectionsep
 
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  %     AWARDS
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-  % \section{Awards}
-  % \begin{tabular}{rll}
-  % 2020	     & Finalist & Lorem Ipsum\\
-  % 2018	     & $2^{nd}$ & Dolor Sit Amet\\
-  % 2015	     & Finalist  & Cras posuere\\
-  % \\
-  % \end{tabular}
-  % \sectionsep
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   %
   %     COLUMN TWO
@@ -201,88 +161,6 @@
   \sectionsep
   Arduino \textbullet{} AVR/PIC microcontrollers \textbullet{} ESP32 \textbullet{} ESP8266 \textbullet{} Raspberry Pi \\
 
-  \sectionsep
-
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  %     EDUCATION
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-  \section{Education}
-  \subsection{ITIS Galvani}
-  \descript{Secondary School Diploma in Industrial Engineering}
-  \descript{Electromedical field}
-  \location{2011 - 2016}
-  \location{Milano, Italy}
-  \sectionsep
-
-  \subsection{Politecnico di Milano}
-  \descript{Bachelor in Electronic Engineering}
-  \location{2016 - 2021}
-  \location{Milano, Italy}
-  \sectionsep
-
-  \subsection{Politecnico di Milano}
-  \descript{Master’s degree in Computer Science and Engineering}
-  \location{2021 - }
-  \location{Milano, Italy}
-  \sectionsep
-
-  % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  % %     REFERENCES
-  % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-  % \section{References}
-  % \href{https://www.linkedin.com/company/john-doe/}{\textbf{John Doe}, Senior Software Developer, Tyrell Corp}
-  % \begingroup
-  % \setbox0=\hbox{
-  % \includegraphics[scale=0.1,trim={0 1cm 0cm 0cm}]{icons/main/mail.png}\hspace{0.3cm} john.doe@email.com
-  % }
-  % \parbox{\wd0}{\box0}
-  % \endgroup
-  % \begingroup
-  % \setbox0=\hbox{
-  % \includegraphics[scale=0.1,trim={0 1.25cm -0.4cm 0cm}]{icons/main/phone.png}\hspace{0.3cm}+19999999999
-  % }
-  % \parbox{\wd0}{\box0}\endgroup
-  % \\
-  % \sectionsep
-  % \href{https://www.linkedin.com/company/john-doe/}{\textbf{Jane Doe}}, Senior Software Developer, Primatech
-  % \\
-  % \begingroup
-  % \setbox0=\hbox{
-  % \includegraphics[scale=0.1,trim={0 1cm 0cm 0cm}]{icons/main/mail.png}\hspace{0.3cm} jane.doe@email.com
-  % }
-  % \parbox{\wd0}{\box0}
-  % \endgroup
-  % \begingroup
-  % \setbox0=\hbox{
-  % \includegraphics[scale=0.1,trim={0 1.25cm -0.4cm 0cm}]{icons/main/phone.png}\hspace{0.3cm}+19999999999
-  % }
-  % \parbox{\wd0}{\box0}\endgroup
-  % \\
-
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  %     COURSEWORK
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-  % \section{Coursework}
-
-  % \subsection{Graduate}
-  % Graduate Algorithms \textbullet{}\\
-  % Advanced Computer Architecture \textbullet{}\\
-  % Operating Systems \textbullet{}\\
-  % Artificial Intelligence \textbullet{}\\
-  % Visualization For Scientific Data \\
-  % \sectionsep
-
-  % \subsection{Undergraduate}
-
-  % Database Management Systems \textbullet{}\\
-  % Object Oriented Analysis and Design \textbullet{}\\
-  % Artificial Intelligence and Expert Systems \textbullet{}\\
-  % Scripting Languages and Web Tech \textbullet{}\\
-  % Software Engineering \\
-
 \end{minipage}
-\end{document}  \documentclass[]{article}
+\end{document}
 
