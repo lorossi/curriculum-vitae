@@ -22,7 +22,7 @@
 \usepackage[british]{babel}
 \usepackage[left=0mm, right=0mm, top=0mm, bottom=0mm]{geometry}
 \usepackage[stretch=25, shrink=25]{microtype}
-
+\usepackage[none]{hyphenat}  % no hyphenation
 \usepackage{graphicx}        % To insert pictures
 \usepackage{xcolor}          % To add colour to the document
 \usepackage{marvosym}        % Provides icons for the contact details
@@ -88,11 +88,10 @@
 \begin{minipage}[t]{0.30\textwidth} %% Left column -- outer definition
   %  Left column -- top dark rectangle
 
-  \vspace{-.2ex} % Eliminates the small gap
   \colorbox{cvblue}{
     \color{white}  %% LEFT BOX
-    \kern0.09\textwidth\relax% Left margin provided explicitly
-    \begin{minipage}[t][293mm][t]{0.82\textwidth}
+    \hspace{1em}  %% Left margin
+    \begin{minipage}[t][\textheight][t]{0.82\textwidth}
       \raggedright
       \vspace*{2.5ex}
 
@@ -127,21 +126,22 @@
       \textbf{Italian} (native)
 
       \leftsection{Programming Languages}
-      \textbf{Proficient}: C, JavaScript, Go, Python, Processing, GDscript \\
-      \textbf{Experienced}: VHDL, SQL, Assembly, Java, Bash, Haskell, Scheme, Erlang \\
-      \textbf{Familiar}: Matlab, C++, Rust
+      \textbf{Proficient}: C, GDscript, Go, JavaScript, Processing, Python \\
+      \textbf{Experienced}: Assembly, Bash, Erlang, Haskell, Java, SQL, Scheme, VHDL \\
+      \textbf{Familiar}: C++, Matlab, Rust
 
       \leftsection{Descriptive Languages}
       CSS, HTML5, \LaTeX
 
+      \leftsection{Frameworks}
+      Bootstrap, Django, FastAPI, Flask, JQuery, Keras, OpenCV, TensorFlow
+
       \leftsection{Hobbies}
-      \begin{itemize}
-        \item Photography
-        \item Photo Editing
-        \item Film Lover
-      \end{itemize}
+      Photography, Photo Editing, Digital Art, Cooking, Movie Watching
+
     \end{minipage}%
-    \kern0.09\textwidth\relax%%Right margin provided explicitly to stretch the colour box
+
+    \hspace{1em}  %% Right margin
   }
 \end{minipage}% Right column
 \hskip2.5em% Left margin for the white area
@@ -174,7 +174,7 @@
   \itemspacing
 
   \subsectiontitle{Full Stack developer}
-  \topics{JavaScript | Python | HTML5 | CSS} \\
+  \topics{CSS | HTML5 | JavaScript | Python} \\
   \descript{Development of websites from back to front-end, including data analysis and visualizations, and interactive web programs.} \\
   \descript{Foundations of web design and creation of user-friendly interfaces.} \\
   \descript{Integration of web services with serverless platforms like AWS Lambda.}
@@ -182,22 +182,22 @@
   \itemspacing
 
   \subsectiontitle{Visual Arts and Games Developer}
-  \topics{JavaScript | Python | Processing | Godot} \\
+  \topics{GDscript | JavaScript | Processing | Python} \\
   \descript{Creation of interactive or fully automated digital art projects.} \\
-  \descript{Application of creative coding oriented to make visually appealing videos and images.} \\
+  \descript{Application of creative coding concepts oriented to make visually appealing videos and images.} \\
   \descript{Creation of 2D games using Godot Engine, from game design to programming.}
 
   \itemspacing
 
   \subsectiontitle{General Software Developer}
-  \topics{Python | JavaScript | Go | C } \\
+  \topics{C | Go | JavaScript | Python} \\
   \descript{Development of software applications for various purposes, including web scraping, data analysis, visualizations, and computationally-heavy problem-solving.} \\
   \descript{Participation in multiple online coding challenges, such as Advent of Code, Codewars, Leetcode, and Challenges provided by Reply.}
 
   \itemspacing
 
   \subsectiontitle{Deep Learning Developer}
-  \topics{Python | TensorFlow | Keras} \\
+  \topics{Keras | Python | TensorFlow} \\
   \descript{Development of deep learning models for image classification, object detection, and image segmentation.} \\
   \descript{Development of deep learning models for real-world problems.} \\
   \descript{Development of models for real time image processing.}
@@ -205,7 +205,7 @@
   \itemspacing
 
   \subsectiontitle{Booklet Creator}
-  \topics{Adobe InDesign | Adobe Photoshop | Adobe Lightroom} \\
+  \topics{Adobe InDesign | Adobe Lightroom | Adobe Photoshop} \\
   \descript{Creation of booklets for personal projects.} \\
   \descript{Use of specialized software for image editing, image development, and page layout creation.}
 
