@@ -56,6 +56,7 @@
 \newcommand{\sectiontitle}[1]{\vspace*{2.5ex}\textsc{\Large\color{cvblue}#1}\par%
      \vspace*{-2ex}{\color{cvblue}\hrulefill}\par}
 \newcommand{\subsectiontitle}[1]{\textsc{#1}}
+\newcommand{\nametitle}[1]{\textbf{\Huge\textcolor{cvblue}{#1}}}
 
 % Icons commands
 \newcommand{\websiteline}{\par{\includegraphics[height=10pt]{icons/website_white.png}}\ \href{https://www.lorenzoros.si}{lorenzoros.si}}
@@ -86,16 +87,14 @@
 
 \begin{minipage}[t]{0.30\textwidth} %% Left column -- outer definition
   %  Left column -- top dark rectangle
-  \colorbox{cvblue}{\begin{minipage}[t][5mm][t]{\textwidth}\null\hfill\null\end{minipage}}
 
   \vspace{-.2ex} % Eliminates the small gap
-  \colorbox{cvblue!90}{\color{white}  %% LEFT BOX
+  \colorbox{cvblue}{
+    \color{white}  %% LEFT BOX
     \kern0.09\textwidth\relax% Left margin provided explicitly
     \begin{minipage}[t][293mm][t]{0.82\textwidth}
       \raggedright
       \vspace*{2.5ex}
-
-      \Large Lorenzo \textbf{\textsc{Rossi}} \normalsize
 
       % Centering without extra vertical spacing
       \null\hfill\includegraphics[width=0.75\textwidth]{images/photo.png}\hfill\null
@@ -150,6 +149,8 @@
   \setlength{\parskip}{0.8ex}% Adds spaces between paragraphs; use \\ to add new lines without this space. Shrink this amount to fit more data vertically
 
   \vspace{2ex}
+
+  \nametitle{Lorenzo Rossi}
 
   \sectiontitle{Experience}
 
