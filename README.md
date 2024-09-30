@@ -6,4 +6,4 @@
 
 ## Credits
 
-Template by [Shubham Mazumder](https://it.overleaf.com/latex/templates/plushcv/jybpnsftmdkf), slightly edited to fit my needs.
+Template by *Andreï V. Kostyrka, University of Luxembourg*, edited to better fit my needs.
