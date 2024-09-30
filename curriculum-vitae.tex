@@ -1,181 +1,231 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% PlushCV - One Page Two Column Resume
-% LaTeX Template
-% Version 1.0 (11/28/2021)
+% LetzCV-sleek 1.0 LaTeX template
+% Author: Andreï V. Kostyrka, University of Luxembourg
 %
-% Author:
-% Shubham Mazumder (http://mazumder.me)
-% Edited to suit my needs by Lorenzo Rossi
+% This template fills the gap in the available variety of templates
+% by proposing something that is not a custom class, not using any
+% hard-coded settings deeply hidden in style files, and provides
+% a handful of custom command definitions that are as transparent as it gets.
+% Developed at the University of Luxembourg.
 %
-% Hacked together from:
-% https://github.com/deedydas/Deedy-Resume
+% Target audience: applicants in the IT industry, or business in general
 %
-% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The main strength of this template is, it explicitly showcases how
+% to break the flow of text to achieve the most flexible right alignment
+% of dates for multiple configurations.
 %
-% CHANGELOG:
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%Icons:
-%%Main: https://icons8.com/icons/carbon-copy
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Modified by Lorenzo Rossi to better suit my needs.
 
-\documentclass[]{plushcv}
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhf{}
+\documentclass[11pt, a4paper]{article}
+
+\usepackage[T1]{fontenc}     % We are using pdfLaTeX,
+\usepackage[utf8]{inputenc}  % hence this preparation
+\usepackage[british]{babel}
+\usepackage[left=0mm, right=0mm, top=0mm, bottom=0mm]{geometry}
+\usepackage[stretch=25, shrink=25]{microtype}
+
+\usepackage{graphicx}        % To insert pictures
+\usepackage{xcolor}          % To add colour to the document
+\usepackage{marvosym}        % Provides icons for the contact details
+\usepackage{enumitem}        % To redefine spacing in lists
+\usepackage{amssymb}         % For black triangle right
+\setlist{parsep=0pt, topsep=0pt, partopsep=1pt, itemsep=1pt, leftmargin=6mm, noitemsep}
+
+\usepackage{FiraSans}        % Font for the document
+\renewcommand{\familydefault}{\sfdefault}
+
+
+% Custom colours
+\definecolor{cvblue}{HTML}{49789c}
+\definecolor{cvtopic}{HTML}{454545}
+\definecolor{cvbullet}{HTML}{373737}
+
+% Custom Bullet
+\newcommand{\sbullet}[1][.5]{\textcolor{cvbullet}{\(\mathbin{\vcenter{\hbox{\scalebox{#1}{\(\bullet\)}}}}\)}\hspace{0.5ex}}
+\newcommand{\striangle}[1][.5]{\textcolor{cvbullet}{\(\mathbin{\vcenter{\hbox{\scalebox{#1}{\(\blacktriangleright\)}}}}\)}\hspace{0.5ex}}
+
+\newcommand{\bigbullet}{\sbullet[0.65]}
+\newcommand{\bigtriangle}{\striangle[0.65]}
+
+% User-defined commands
+\newcommand{\dates}[1]{\hfill\mbox{\textbf{#1}}} % Bold stuff that doesn’t got broken into lines
+\newcommand{\itemspacing}{\par\vskip 0.25ex} % Item spacing
+\newcommand{\leftsection}[1]{\vspace*{2ex}\textsc{\textbf{#1}}\par%
+\vspace*{-1.5ex}\hrulefill\par\vspace*{0.7ex}}
+\newcommand{\leftsubsection}[1]{\small{#1}}
+
+\newcommand{\sectiontitle}[1]{\vspace*{2.5ex}\textsc{\Large\color{cvblue}#1}\par%
+     \vspace*{-2ex}{\color{cvblue}\hrulefill}\par}
+\newcommand{\subsectiontitle}[1]{\textsc{#1}}
+
+% Icons commands
+\newcommand{\websiteline}{\par{\includegraphics[height=10pt]{icons/website_white.png}}\ \href{https://www.lorenzoros.si}{lorenzoros.si}}
+\newcommand{\emailline}{\par{\includegraphics[height=10pt]{icons/email_white.png}}\ \href{mailto:jobs@lorenzoros.si}{jobs@lorenzoros.si} }
+\newcommand{\githubline}{\par{\includegraphics[height=10pt]{icons/github_white.png}}\ \href{https://www.github.com/lorossi}{github.com/lorossi}}
+\newcommand{\linkedinline}{\par{\includegraphics[height=10pt]{icons/linkedin_white.png}}\ \href{https://www.linkedin.com/in/lorenzo-rossi-897628212/}{Lorenzo Rossi}}
+\newcommand{\instagramline}{\par{\includegraphics[height=10pt]{icons/instagram_white.png}}\ \href{https://www.instagram.com/lorossi/}{lorossi}}
+
+\newcommand{\phoneline}{\par{\includegraphics[height=10pt]{icons/phone_white.png}}\ +39\,331\,102\,4623}
+\newcommand{\mapline}{\par{\includegraphics[height=10pt]{icons/map_white.png}}\ Milano, Italy}
+
+% Custom commands
+\newcommand{\topics}[1]{\textcolor{cvtopic}{\small\hfill\textsc{#1}}}
+\newcommand{\descript}[1]{\textcolor{black}{\bigbullet\small #1}}
+
+
+\usepackage[colorlinks = true, urlcolor = white, linkcolor = white]{hyperref}
+
 \begin{document}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%     TITLE NAME
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Style definitions -- killing the unnecessary space and adding the skips explicitly
+\setlength{\topskip}{0pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\fboxsep}{0pt}
+\pagestyle{empty}
+\raggedbottom
 
-\namesection{Lorenzo}{Rossi}{Software Developer}
-{
-  \contactline{\href{https://www.lorenzoros.si}{lorenzoros.si}}
-  {\href{mailto:mail@lorenzoros.si}{mail@lorenzoros.si}}
-  {\href{https://www.github.com/lorossi}{lorossi}}
-  {\href{https://www.instagram.com/lorossi/}{lorossi}}
-  {\href{https://www.linkedin.com/in/lorenzo-rossi-897628212/}{Lorenzo Rossi}}
-}
+\begin{minipage}[t]{0.30\textwidth} %% Left column -- outer definition
+  %  Left column -- top dark rectangle
+  \colorbox{cvblue}{\begin{minipage}[t][5mm][t]{\textwidth}\null\hfill\null\end{minipage}}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%     COLUMN ONE
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \vspace{-.2ex} % Eliminates the small gap
+  \colorbox{cvblue!90}{\color{white}  %% LEFT BOX
+    \kern0.09\textwidth\relax% Left margin provided explicitly
+    \begin{minipage}[t][293mm][t]{0.82\textwidth}
+      \raggedright
+      \vspace*{2.5ex}
 
+      \Large Lorenzo \textbf{\textsc{Rossi}} \normalsize
+
+      % Centering without extra vertical spacing
+      \null\hfill\includegraphics[width=0.75\textwidth]{images/photo.png}\hfill\null
+
+      \vspace*{0.5ex} % Extra space after the picture
+
+      \leftsection{About Me}
+      Computer Science and Engineering student. \\
+      Technology and programming enthusiast. \\
+      Creative project developer. \\
+
+      \leftsection{Contact details}
+      \small
+      \websiteline \\[0.4ex]
+      \githubline \\[0.4ex]
+      \instagramline \\[0.4ex]
+      \linkedinline
+      \emailline \\[0.4ex]
+      \phoneline \\[0.4ex]
+      \mapline
+
+      \normalsize
+
+      \leftsection{Personal information}
+      Birth Date: \textbf{01/02/1997} \\[0.5ex]
+      Citizenship: \textbf{Italian} \\[0.5ex]
+      Languages:
+      \textbf{English} (C1)
+      \textbf{French} (B1)
+      \textbf{Italian} (native)
+
+      \leftsection{Programming Languages}
+      \textbf{Proficient}: C, JavaScript, Go, Python, Processing, GDscript \\
+      \textbf{Experienced}: VHDL, SQL, Assembly, Java, Bash, Haskell, Scheme, Erlang \\
+      \textbf{Familiar}: Matlab, C++, Rust
+
+      \leftsection{Descriptive Languages}
+      CSS, HTML5, \LaTeX
+
+      \leftsection{Hobbies}
+      \begin{itemize}
+        \item Photography
+        \item Photo Editing
+        \item Film Lover
+      \end{itemize}
+    \end{minipage}%
+    \kern0.09\textwidth\relax%%Right margin provided explicitly to stretch the colour box
+  }
+\end{minipage}% Right column
+\hskip2.5em% Left margin for the white area
 \begin{minipage}[t]{0.60\textwidth}
+  \setlength{\parskip}{0.8ex}% Adds spaces between paragraphs; use \\ to add new lines without this space. Shrink this amount to fit more data vertically
 
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  %     EXPERIENCE
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \vspace{2ex}
 
-  \section{Experience}
-  \runsubsection{Freelancing}
-  \descript{Web Developer | Embedded developer | Software developer}
-  \location{October 2020 - Current}
-  \vspace{\topsep} % Hacky fix for awkward extra vertical space
-  \begin{tightemize}
-    \sectionsep
-    \item Engaged and completed multiple projects involving both embedded \textit{(using ESP32, Arduino and RaspberryPi)} and desktop \textit{(on both Linux and Windows)} systems
-    \item Gained important soft skills like dealing with a vast amount of work and collaborating with people all over the world
-    \item Got the chance to interface with the real world outside my university and interact with real life projects
-  \end{tightemize}
-  \sectionsep
+  \sectiontitle{Experience}
 
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  %     Projects
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \subsectiontitle{Freelancing} on web platforms
+  \dates{October 2020 - Current} \\
+  \descript{Areas of expertise: Web Development \textit{(front-end and back-end)}, Embedded Systems, Software Development.} \\
+  \descript{Engaged and completed multiple projects involving both embedded \textit{(using ESP32, Arduino and RaspberryPi)} and desktop \textit{(on both Linux and Windows)} systems.} \\
+  \descript{Gained important soft skills like dealing with a vast amount of work and collaborating with people all over the world.} \\
+  \descript{Got the chance to interface with the real world outside my university and interact with real life projects.}
 
-  \section{Personal Projects}
+  \itemspacing
 
-  \runsubsection{Embedded developer}
-  \descript{Arduino | ESP32/ESP8266 | PIC}
-  \begin{tightemize}
-    \item Experience in developing embedded systems using microcontrollers
-    \item Development of IoT system for real word data measurements
-    \item Creation of MQTT-based systems to interface users with data
-  \end{tightemize}
-  \sectionsep
+  \sectiontitle{Personal Projects}
 
-  \runsubsection{Front End developer}
-  \descript{JavaScript | HTML5 | CSS}
+  \subsectiontitle{Embedded developer}
+  \topics{Arduino | ESP32 | ESP8266 | PIC} \\
+  \descript{Experience in developing embedded systems using microcontrollers.} \\
+  \descript{Development of IoT system for real word data measurements.} \\
+  \descript{Creation of web interfaces to display data.}
 
-  \begin{tightemize}
-    \item Development of websites and interactive web programs
-    \item Foundations of web design and creation of user-friendly interfaces
-  \end{tightemize}
-  \sectionsep
+  \itemspacing
 
-  \runsubsection{Full Stack developer}
-  \descript{JavaScript | Python}
-  \begin{tightemize}
-    \item Development of websites from back to front-end, including data analysis and visualizations
-    \item Integration of web services with serverless platforms like AWS Lambda
-  \end{tightemize}
-  \sectionsep
+  \subsectiontitle{Full Stack developer}
+  \topics{JavaScript | Python | HTML5 | CSS} \\
+  \descript{Development of websites from back to front-end, including data analysis and visualizations, and interactive web programs.} \\
+  \descript{Foundations of web design and creation of user-friendly interfaces.} \\
+  \descript{Integration of web services with serverless platforms like AWS Lambda.}
 
-  \runsubsection{Visual Arts developer}
-  \descript{JavaScript | Python | JavaScript | Processing}
-  \begin{tightemize}
-    \item Creation of interactive or fully automated digital art projects
-    \item Application of creative coding oriented to make visually appealing videos and images
-  \end{tightemize}
-  \sectionsep
+  \itemspacing
 
-  \runsubsection{General software developer}
-  \descript{Python | Go | C | C++ | JavaScript}
-  \begin{tightemize}
-    \item General use software development, including data analysis, visualizations, computational-heavy problem solving
-    \item Participation in multiple online coding challenges, including Advent of Code and Codewars
-    \item Development of libraries and creation of relative documentation using ad hoc tools like Doxygen
-  \end{tightemize}
-  \sectionsep
+  \subsectiontitle{Visual Arts and Games Developer}
+  \topics{JavaScript | Python | Processing | Godot} \\
+  \descript{Creation of interactive or fully automated digital art projects.} \\
+  \descript{Application of creative coding oriented to make visually appealing videos and images.} \\
+  \descript{Creation of 2D games using Godot Engine, from game design to programming.}
 
-  \runsubsection{Deep Learning developer}
-  \descript{Python | TensorFlow | Keras}
-  \begin{tightemize}
-    \item Development of deep learning models for image and text classification
-    \item Creation of generative models for image and text generation
-    \item Application of deep learning models to real world problems
-    \item Development of models for real time image processing
-  \end{tightemize}
-  \sectionsep
+  \itemspacing
 
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  %
-  %     COLUMN TWO
-  %
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \subsectiontitle{General Software Developer}
+  \topics{Python | JavaScript | Go | C } \\
+  \descript{Development of software applications for various purposes, including web scraping, data analysis, visualizations, and computationally-heavy problem-solving.} \\
+  \descript{Participation in multiple online coding challenges, such as Advent of Code, Codewars, Leetcode, and Challenges provided by Reply.}
+
+  \itemspacing
+
+  \subsectiontitle{Deep Learning Developer}
+  \topics{Python | TensorFlow | Keras} \\
+  \descript{Development of deep learning models for image classification, object detection, and image segmentation.} \\
+  \descript{Development of deep learning models for real-world problems.} \\
+  \descript{Development of models for real time image processing.}
+
+  \itemspacing
+
+  \subsectiontitle{Booklet Creator}
+  \topics{Adobe InDesign | Adobe Photoshop | Adobe Lightroom} \\
+  \descript{Creation of booklets for personal projects.} \\
+  \descript{Use of specialized software for image editing, image development, and page layout creation.}
+
+  \itemspacing
+
+  \sectiontitle{Education}
+
+  \subsectiontitle{IIS Luigi Galvani, Milano}
+  \dates{2011 - 2016} \\
+  \descript{High School Diploma in Electromedical Installations.}
+
+  \subsectiontitle{Politecnico di Milano}
+  \dates{2016 - 2021} \\
+  \descript{Bachelor of Science in Electronic Engineering.}
+
+  \itemspacing
+
+  \subsectiontitle{Politecnico di Milano}
+  \dates{2021 - Current} \\
+  \descript{Master of Science in Computer Science and Engineering.}
 
 \end{minipage}
-\hfill
-\begin{minipage}[t]{0.3\textwidth}
 
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  %     SKILLS
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-  \section{Skills}
-  \subsection{Programming}
-  \sectionsep
-  \location{Proficient:}
-  Python \textbullet{} C \textbullet{} JavaScript \textbullet{} Go \textbullet{} Processing \\
-  \sectionsep
-  \location{Experienced:}
-  VHDL \textbullet{} SQL \textbullet{} Assembly \textbullet{} Java \textbullet{} Bash \textbullet{} Haskell \textbullet{} Scheme \textbullet{} Erlang \\
-  \sectionsep
-  \location{Familiar:}
-  Matlab \textbullet{} C++ \textbullet{} Rust \\
-  \sectionsep
-  \sectionsep
-  \subsection{Libraries/Frameworks}
-  \sectionsep
-  jQuery \textbullet{} OpenCV \textbullet{} Flask \textbullet{} Django \textbullet{} Numpy \textbullet{}
-  TensorFlow \textbullet{} Keras \textbullet{} Pandas \textbullet{} Matplotlib \\
-  \sectionsep
-  \sectionsep
-  \subsection{Descriptive Languages}
-  \sectionsep
-  CSS \textbullet{} HTML5 \textbullet{} \LaTeX
-  \sectionsep
-  \subsection{Operating Systems}
-  \sectionsep
-  Windows \textbullet{} Debian based distros \textbullet{} Arch based distros \\
-  \sectionsep
-  \sectionsep
-  \subsection{Embedded Development}
-  \sectionsep
-  Arduino \textbullet{} AVR/PIC microcontrollers \textbullet{} ESP32/ESP8266 \textbullet{} Raspberry Pi \\
-  \sectionsep
-  \sectionsep
-  \subsection{Other}
-  \sectionsep
-  Adobe Photoshop \textbullet{} Adobe InDesign \textbullet{} Adobe Lightroom \\
-  \sectionsep
-\end{minipage}
 \end{document}
-
