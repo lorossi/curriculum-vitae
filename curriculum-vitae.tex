@@ -33,7 +33,6 @@
 \usepackage{FiraSans}        % Font for the document
 \renewcommand{\familydefault}{\sfdefault}
 
-
 % Custom colours
 \definecolor{cvblue}{HTML}{49789c}
 \definecolor{cvtopic}{HTML}{454545}
@@ -48,13 +47,14 @@
 
 % User-defined commands
 \newcommand{\dates}[1]{\hfill\mbox{\textbf{#1}}} % Bold stuff that doesn’t got broken into lines
-\newcommand{\itemspacing}{\par\vskip 0.25ex} % Item spacing
+\newcommand{
+\itemspacing}{\par\vskip 0.25ex} % Item spacing
 \newcommand{\leftsection}[1]{\vspace*{2ex}\textsc{\textbf{#1}}\par%
 \vspace*{-1.5ex}\hrulefill\par\vspace*{0.7ex}}
 \newcommand{\leftsubsection}[1]{\small{#1}}
 
 \newcommand{\sectiontitle}[1]{\vspace*{2.5ex}\textsc{\Large\color{cvblue}#1}\par%
-     \vspace*{-2ex}{\color{cvblue}\hrulefill}\par}
+\vspace*{-2ex}{\color{cvblue}\hrulefill}\par}
 \newcommand{\subsectiontitle}[1]{\textbf{\textsc{#1}}}
 \newcommand{\nametitle}[1]{\textbf{\Huge\textcolor{cvblue}{#1}}}
 
@@ -71,7 +71,6 @@
 % Custom commands
 \newcommand{\topics}[1]{\textcolor{cvtopic}{\small\hfill\textsc{#1}}}
 \newcommand{\descript}[1]{\textcolor{black}{\bigbullet\small #1}}
-
 
 \usepackage[colorlinks = true, urlcolor = white, linkcolor = white]{hyperref}
 
@@ -137,7 +136,7 @@
       Bootstrap, Django, FastAPI, Flask, JQuery, Keras, OpenCV, TensorFlow
 
       \leftsection{Hobbies}
-      Photography, Photo Editing, Digital Art, Cooking, Movie Watching
+      Photography, Photo Editing, Digital Art, Cooking, Film Watching
 
     \end{minipage}%
 
@@ -161,7 +160,7 @@
   \descript{Gained important soft skills like dealing with a vast amount of work and collaborating with people all over the world.} \\
   \descript{Got the chance to interface with the real world outside my university and interact with real life projects.}
 
-  \itemspacing
+\itemspacing
 
   \sectiontitle{Personal Projects}
 
@@ -171,7 +170,7 @@
   \descript{Development of IoT system for real word data measurements.} \\
   \descript{Creation of web interfaces to display data.}
 
-  \itemspacing
+\itemspacing
 
   \subsectiontitle{Full Stack developer}
   \topics{CSS | HTML5 | JavaScript | Python} \\
@@ -179,7 +178,7 @@
   \descript{Foundations of web design and creation of user-friendly interfaces.} \\
   \descript{Integration of web services with serverless platforms like AWS Lambda.}
 
-  \itemspacing
+\itemspacing
 
   \subsectiontitle{Visual Arts Developer}
   \topics{GDscript | JavaScript | Processing | Python} \\
@@ -187,14 +186,14 @@
   \descript{Application of creative coding concepts oriented to make visually appealing videos and images.} \\
   \descript{Creation of 2D games using Godot Engine, from game design to programming.}
 
-  \itemspacing
+\itemspacing
 
   \subsectiontitle{General Software Developer}
   \topics{C | Go | JavaScript | Python} \\
   \descript{Development of software applications for various purposes, including web scraping, data analysis, visualizations, and computationally-heavy problem-solving.} \\
   \descript{Participation in multiple online coding challenges, such as Project Euler, Advent of Code, Codewars, Leetcode, and coding Challenges provided by Reply.}
 
-  \itemspacing
+\itemspacing
 
   \subsectiontitle{Deep Learning Developer}
   \topics{Keras | Python | TensorFlow} \\
@@ -202,14 +201,14 @@
   \descript{Development of deep learning models for real-world problems.} \\
   \descript{Development of models for real time image processing.}
 
-  \itemspacing
+\itemspacing
 
   \subsectiontitle{Booklet Creator}
   \topics{Adobe InDesign | Adobe Lightroom | Adobe Photoshop} \\
   \descript{Creation of booklets for personal projects.} \\
   \descript{Use of specialized software for image editing, image development, and page layout creation.}
 
-  \itemspacing
+\itemspacing
 
   \sectiontitle{Education}
 
@@ -221,7 +220,7 @@
   \dates{2016 - 2021} \\
   \descript{Bachelor of Science in Electronic Engineering.}
 
-  \itemspacing
+\itemspacing
 
   \subsectiontitle{Politecnico di Milano}
   \dates{2021 - Current} \\
