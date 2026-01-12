@@ -20,7 +20,7 @@ jobs:
         root_file: curriculum-vitae.tex
 
     - name: Upload TeXtidote report
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: textidote_report
         path: report.html
