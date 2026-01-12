@@ -1,6 +1,14 @@
+# IDE
+.vscode/
+!.vscode/settings.json
+
+# LaTeX intermediate files
 *.aux
 *.log
 *.f*
 *.out
 *.gz
 *temp*
+
+# Compiled PDF
+*.pdf
