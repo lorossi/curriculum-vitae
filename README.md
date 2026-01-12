@@ -1,8 +1,13 @@
 # Curriculum Vitae
 
-[Download here.](https://github.com/lorossi/curriculum-vitae/raw/main/curriculum-vitae.pdf)
+[![Compile CV](https://github.com/lorossi/curriculum-vitae/actions/workflows/compile-cv.yml/badge.svg)](https://github.com/lorossi/curriculum-vitae/actions/workflows/compile-cv.yml)
 
-[Web viewer here.](https://github.com/lorossi/curriculum-vitae/blob/main/curriculum-vitae.pdf)
+**[Download Latest CV](https://github.com/lorossi/curriculum-vitae/releases/download/latest/curriculum-vitae.pdf)**
+
+Alternative links:
+
+- [View in browser](https://github.com/lorossi/curriculum-vitae/releases/latest)
+- [All releases](https://github.com/lorossi/curriculum-vitae/releases)
 
 ## Credits
 
