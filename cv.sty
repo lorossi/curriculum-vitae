@@ -20,8 +20,8 @@
 \ProcessOptions\relax
 
 % Load the required packages
-\RequirePackage[T1]{fontenc}     % We are using pdfLaTeX,
-\RequirePackage[utf8]{inputenc}  % hence this preparation
+\RequirePackage[T1]{fontenc}
+\RequirePackage[utf8]{inputenc}
 \RequirePackage[british]{babel}
 \RequirePackage[left=0mm, right=0mm, top=0mm, bottom=0mm]{geometry}
 \RequirePackage[stretch=25, shrink=25]{microtype}
@@ -31,7 +31,7 @@
 \RequirePackage{marvosym}        % Requires icons for the contact details
 \RequirePackage{enumitem}        % To redefine spacing in lists
 \RequirePackage{amssymb}         % For black triangle right
-\RequirePackage[colorlinks = true, urlcolor = white, linkcolor = white]{hyperref}
+\RequirePackage[colorlinks=true, urlcolor=white, linkcolor=white]{hyperref}
 
 \setlist{parsep=0pt, topsep=0pt, partopsep=1pt, itemsep=1pt, leftmargin=6mm, noitemsep}
 
@@ -140,8 +140,8 @@
 
         \leftsection{Programming Languages}
         \textbf{Proficient}: C, GDscript, Go, JavaScript, Processing, Python \\
-        \textbf{Experienced}: Assembly, Bash, Erlang, Haskell, Java, SQL, Scheme, VHDL \\
-        \textbf{Familiar}: C++, Matlab, Rust
+        \textbf{Experienced}: Assembly, Bash, C++, Erlang, Haskell, Java, SQL, Scheme, VHDL \\
+        \textbf{Familiar}: Matlab, Rust
 
         \leftsection{Descriptive Languages}
         CSS, HTML5, LaTeX
@@ -150,7 +150,7 @@
         Bootstrap, Django, FastAPI, Flask, JQuery, Keras, OpenCV, TensorFlow
 
         \leftsection{Hobbies}
-        Photography, Photo Editing, Digital Art, Cooking, Film Watching
+        Photography, Photo Editing, Digital Art, Cooking
 
       \end{minipage}%
 
@@ -168,13 +168,23 @@
     \sectiontitle{Experience}
 
     \subsectiontitle{Freelancing} on web platforms
-    \dates{October 2020 - Current} \\
+    \dates{October 2020 - December 2025} \\
     \descript{Areas of expertise: Web Development \textit{(front-end and back-end)}, Embedded Systems, Software Development.} \\
-    \descript{Engaged and completed multiple projects involving both embedded \textit{(using ESP32, Arduino and RaspberryPi)} and desktop \textit{(on both Linux and Windows)} systems.} \\
-    \descript{Gained important soft skills like dealing with a vast amount of work and collaborating with people all over the world.} \\
-    \descript{Got the chance to interface with the real world outside my university and interact with real life projects.}
+    \descript{Engaged and completed multiple projects involving both embedded \textit{(using ESP32, Arduino and RaspberryPi)} and desktop \textit{(on both Linux and Windows)} systems.}
 
-  \itemspacing
+    \subsectiontitle{Technical Studentship} at CERN
+    \dates{April 2025 - Present (ends March 2026)} \\
+    \descript{
+      \hypersetup{urlcolor=cvblue} % temporarily reset coloring
+      \href{https://epc-ccs.web.cern.ch/content/converter-control}{SY-EPC-CCS} section, \href{https://epc-ccs.web.cern.ch/content/converter-control}{Converter Control team}
+      \hypersetup{urlcolor=white} % back to normal
+    } \\
+    \descript{Implemented FFP communication protocol for power converter (FGC) communication in SY-EPC-CCS section, enabling data transfer in new FGC4 generation with FGCD framework.} \\
+    \descript{Developed C++ firmware for WebSockets integration in FGC4, improving real-time data exchange for accelerator controls.} \\
+    \descript{Updated pyfgc Python library to support FFP protocol, facilitating seamless FGC communication across TCP/IP and WebSockets.} \\
+    \descript{Enhanced FGC-API backend for multi-protocol control (FFP, NCRP) and Powerspy logging tool, supporting 1700+ LHC converters.}
+
+    \itemspacing
 
     \sectiontitle{Personal Projects}
 
@@ -184,7 +194,7 @@
     \descript{Development of IoT system for real word data measurements.} \\
     \descript{Creation of web interfaces to display data.}
 
-  \itemspacing
+    \itemspacing
 
     \subsectiontitle{Full Stack developer}
     \topics{CSS | HTML5 | JavaScript | Python} \\
@@ -192,7 +202,7 @@
     \descript{Foundations of web design and creation of user-friendly interfaces.} \\
     \descript{Integration of web services with serverless platforms like AWS Lambda.}
 
-  \itemspacing
+    \itemspacing
 
     \subsectiontitle{Visual Arts Developer}
     \topics{GDscript | JavaScript | Processing | Python} \\
@@ -200,14 +210,14 @@
     \descript{Application of creative coding concepts oriented to make visually appealing videos and images.} \\
     \descript{Creation of 2D games using Godot Engine, from game design to programming.}
 
-  \itemspacing
+    \itemspacing
 
     \subsectiontitle{General Software Developer}
     \topics{C | Go | JavaScript | Python} \\
     \descript{Development of software applications for various purposes, including web scraping, data analysis, visualizations, and computationally-heavy problem-solving.} \\
     \descript{Participation in multiple online coding challenges, such as Project Euler, Advent of Code, Codewars, Leetcode, and coding Challenges provided by Reply.}
 
-  \itemspacing
+    \itemspacing
 
     \subsectiontitle{Deep Learning Developer}
     \topics{Keras | Python | TensorFlow} \\
@@ -215,14 +225,13 @@
     \descript{Development of deep learning models for real-world problems.} \\
     \descript{Development of models for real time image processing.}
 
-  \itemspacing
+    \itemspacing
 
-    \subsectiontitle{Booklet Creator}
-    \topics{Adobe InDesign | Adobe Lightroom | Adobe Photoshop} \\
-    \descript{Creation of booklets for personal projects.} \\
-    \descript{Use of specialized software for image editing, image development, and page layout creation.}
-
-  \itemspacing
+    \subsectiontitle{DevOps \& CI/CD}
+    \topics{Bash | GitHub Actions | GitLab CI} \\
+    \descript{Implemented GitHub Actions pipelines for automated testing (Mocha/Chai with NYC coverage), automated build processes, and automatic deployments.} \\
+    \descript{Automated deployments and linting via GitLab CI bash scripts and GitHub actions.} \\
+    \itemspacing
 
     \sectiontitle{Education}
 
@@ -234,11 +243,12 @@
     \dates{2016 - 2021} \\
     \descript{Bachelor of Science in Electronic Engineering.}
 
-  \itemspacing
+    \itemspacing
 
     \subsectiontitle{Politecnico di Milano}
-    \dates{2021 - Current} \\
+    \dates{2021 - graduating March 2026} \\
     \descript{Master of Science in Computer Science and Engineering.}
+    \descript{Thesis: "Implementing communication stack for FGC power converters using FFP protocol at CERN"}
 
   \end{minipage}
 }
