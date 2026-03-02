@@ -7,7 +7,6 @@
 Alternative links:
 
 - [View in browser](https://github.com/lorossi/curriculum-vitae/releases/latest)
-- [All releases](https://github.com/lorossi/curriculum-vitae/releases)
 
 ## Credits
 
