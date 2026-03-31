@@ -5,6 +5,12 @@
       "tools": [
         "pdflatex"
       ]
+    },
+    {
+      "name": "latexmk",
+      "tools": [
+        "latexmk"
+      ]
     }
   ],
   "latex-workshop.latex.tools": [
@@ -19,6 +25,18 @@
         "%DOC%"
       ]
     },
+    {
+      "name": "latexmk",
+      "command": "latexmk",
+      "args": [
+        "-synctex=1",
+        "-shell-escape",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-pdf",
+        "%DOC%"
+      ]
+    }
   ],
   "latex-workshop.latex.recipe.default": "first",
 }
